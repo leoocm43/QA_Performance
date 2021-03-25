@@ -1,34 +1,34 @@
 {
   "aggregate": {
-    "timestamp": "2021-03-25T02:01:21.215Z",
+    "timestamp": "2021-03-25T02:46:22.521Z",
     "scenariosCreated": 1,
-    "scenariosCompleted": 0,
-    "requestsCompleted": 2,
+    "scenariosCompleted": 1,
+    "requestsCompleted": 7,
     "latency": {
-      "min": 175.2,
-      "max": 427,
-      "median": 301.1,
-      "p95": 427,
-      "p99": 427
+      "min": 240.5,
+      "max": 446.3,
+      "median": 339.4,
+      "p95": 446.3,
+      "p99": 446.3
     },
     "rps": {
-      "count": 2,
-      "mean": 2.33
+      "count": 7,
+      "mean": 2.42
     },
     "scenarioDuration": {
-      "min": null,
-      "max": null,
-      "median": null,
-      "p95": null,
-      "p99": null
+      "min": 2664.8,
+      "max": 2664.8,
+      "median": 2664.8,
+      "p95": 2664.8,
+      "p99": 2664.8
     },
     "scenarioCounts": {
       "0": 1
     },
     "errors": {},
     "codes": {
-      "400": 1,
-      "403": 1
+      "200": 3,
+      "204": 4
     },
     "matches": 0,
     "customStats": {},
@@ -44,40 +44,45 @@
   },
   "intermediate": [
     {
-      "timestamp": "2021-03-25T02:01:21.208Z",
+      "timestamp": "2021-03-25T02:46:22.514Z",
       "scenariosCreated": 1,
-      "scenariosCompleted": 0,
-      "requestsCompleted": 2,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 7,
       "latency": {
-        "min": 175.2,
-        "max": 427,
-        "median": 301.1,
-        "p95": 427,
-        "p99": 427
+        "min": 240.5,
+        "max": 446.3,
+        "median": 339.4,
+        "p95": 446.3,
+        "p99": 446.3
       },
       "rps": {
-        "count": 2,
-        "mean": 2.33
+        "count": 7,
+        "mean": 2.42
       },
       "scenarioDuration": {
-        "min": null,
-        "max": null,
-        "median": null,
-        "p95": null,
-        "p99": null
+        "min": 2664.8,
+        "max": 2664.8,
+        "median": 2664.8,
+        "p95": 2664.8,
+        "p99": 2664.8
       },
       "scenarioCounts": {
         "0": 1
       },
       "errors": {},
       "codes": {
-        "400": 1,
-        "403": 1
+        "200": 3,
+        "204": 4
       },
       "matches": 0,
       "latencies": [
-        426957700,
-        175245900
+        446337900,
+        344730200,
+        240544800,
+        308835800,
+        339372700,
+        339879100,
+        298962500
       ],
       "customStats": {},
       "counters": {},

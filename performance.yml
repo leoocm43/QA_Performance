@@ -8,7 +8,7 @@ config:
     headers:
       Authorization: Bearer {{$processEnvironment.TOKEN}}
       Content-type: application/json
-  processor: "./data/faker.js"
+  processor: "./faker.js"
   
 scenarios:
   - flow:
@@ -23,7 +23,7 @@ scenarios:
             content : "{{content}}"
             due_string: "{{due_string}}"
             due_lang: "{{due_lang}}"
-            priority: "{{ priority }}"
+            priority: 2
           capture:
             json: "$.id"
             as: "id"
