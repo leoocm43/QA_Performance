@@ -1,0 +1,89 @@
+{
+  "aggregate": {
+    "timestamp": "2021-03-25T02:01:21.215Z",
+    "scenariosCreated": 1,
+    "scenariosCompleted": 0,
+    "requestsCompleted": 2,
+    "latency": {
+      "min": 175.2,
+      "max": 427,
+      "median": 301.1,
+      "p95": 427,
+      "p99": 427
+    },
+    "rps": {
+      "count": 2,
+      "mean": 2.33
+    },
+    "scenarioDuration": {
+      "min": null,
+      "max": null,
+      "median": null,
+      "p95": null,
+      "p99": null
+    },
+    "scenarioCounts": {
+      "0": 1
+    },
+    "errors": {},
+    "codes": {
+      "400": 1,
+      "403": 1
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 1,
+        "arrivalRate": 1,
+        "name": "Todoist performance testing"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-03-25T02:01:21.208Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 0,
+      "requestsCompleted": 2,
+      "latency": {
+        "min": 175.2,
+        "max": 427,
+        "median": 301.1,
+        "p95": 427,
+        "p99": 427
+      },
+      "rps": {
+        "count": 2,
+        "mean": 2.33
+      },
+      "scenarioDuration": {
+        "min": null,
+        "max": null,
+        "median": null,
+        "p95": null,
+        "p99": null
+      },
+      "scenarioCounts": {
+        "0": 1
+      },
+      "errors": {},
+      "codes": {
+        "400": 1,
+        "403": 1
+      },
+      "matches": 0,
+      "latencies": [
+        426957700,
+        175245900
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}

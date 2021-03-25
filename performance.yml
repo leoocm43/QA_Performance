@@ -1,0 +1,53 @@
+config:
+  target: "https://api.todoist.com"
+  phases:
+    - duration: 1
+      arrivalRate: 1
+      name: "Todoist performance testing"
+  defaults:
+    headers:
+      Authorization: Bearer {{$processEnvironment.TOKEN}}
+      Content-type: application/json
+  processor: "./data/faker.js"
+  
+scenarios:
+  - flow:
+      - log: "Get active tasks"
+      - get:
+          url: "/rest/v1/tasks"
+      - log: "Create new task"
+      - function: "generateRandomData"
+      - post:
+          url: "/rest/v1/tasks"
+          json: 
+            content : "{{content}}"
+            due_string: "{{due_string}}"
+            due_lang: "{{due_lang}}"
+            priority: "{{ priority }}"
+          capture:
+            json: "$.id"
+            as: "id"
+      - log: "Task: {{content}}, {{due_string}}, {{due_lang}}, {{priority}}"
+      - log: "Current Task id is {{id}}"
+      - log: "Get an active task"
+      - get: 
+          url: "/rest/v1/tasks/{{id}}"
+      - log: "Update task content"
+      - post:
+          url: "/rest/v1/tasks/{{id}}"
+          json: 
+            content: "Wizeline QA Task"
+      - log: "Update task status to complete"
+      - post:
+          url: "/rest/v1/tasks/{{id}}"
+          json: 
+            content: "Wizeline QA Task"
+            completed: true
+      - log: "Reopen a task"
+      - post:
+          url: "/rest/v1/tasks/{{id}}/reopen"
+      - log: "Delete a task"
+      - delete:
+          url: "/rest/v1/projects/{{id}}"
+    # For more information: https://artillery.io/docs/script-reference/
+  ##processor: "./myProcessor.js"

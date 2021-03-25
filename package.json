@@ -1,0 +1,17 @@
+{
+  "name": "QA3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "artillery run --output results/report.json performance.yml && artillery report --output results/report.html results/report.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.2",
+    "dotenv": "^8.2.0",
+    "faker": "^5.4.0"
+  }
+}
